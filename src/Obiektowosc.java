@@ -1,9 +1,16 @@
-import javax.xml.namespace.QName;
+import Dziedziczenie.Man;
+import Dziedziczenie.Woman;
+import Obiektowość.Car;
+import Obiektowość.Human;
 
 public class Obiektowosc {
 
     public static void main (String [] args) {
-        Human czlowiek1 = new Human ( " Kasia",  "Nowakowska",  1991);
+
+        Human.opiszKlasę ();
+
+        Integer birthYear;
+        Human czlowiek1 = new Human ( " Kasia",  "Nowakowska", birthYear, 1991);
         //Metoda przeddstaw się jest dostępna bo jest public
         czlowiek1.przedstawSie ();
 
@@ -11,10 +18,10 @@ public class Obiektowosc {
         //czlowiek1.name;
         //czlowiek1.obliczWiek ();
 
-        Human czlowiek2 = new Human (" Robert", "Kowalski", 1985);
+        Human czlowiek2 = new Human (" Robert", "Kowalski", birthYear, 1985);
         czlowiek2.przedstawSie ();
 
-        Human czlowiek3 = new Human (" Gosia", "Majewska", 1969);
+        Human czlowiek3 = new Human (" Gosia", "Majewska", birthYear, 1969);
         czlowiek3.przedstawSie ();
 
         System.out.println (czlowiek3.getName () + " " + czlowiek3.getSurname ());
@@ -30,6 +37,20 @@ public class Obiektowosc {
         Car bmw = new Car ("m3", "bmw", 2016);
         bmw.przyspiesz ( 152 );
         bmw.opiszAuto ();
+
+        //Obiekt klasy Woman
+        Woman kobieta1 = new Woman ("Kasia", "Kowalska", 2007);
+        kobieta1.przedstawSie ();
+        kobieta1.setBirthYear (2009);
+        kobieta1.getName ();
+
+        //Obiekt klasy Man
+        Man mężczyzna1 = new Man ("Stefan", "Wiśniewski", 1990);
+        mężczyzna1.setwaga (78);
+        mężczyzna1.ocensile ();
+        mężczyzna1.przedstawSie ();
+
+
 
 
 
