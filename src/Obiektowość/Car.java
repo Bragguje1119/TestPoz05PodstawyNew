@@ -1,3 +1,5 @@
+package Obiektowość;
+
 public class Car {
 
     //Atrybuty
@@ -9,7 +11,7 @@ public class Car {
 
 
     //Konstruktor
-    Car (String model, String marka, Integer rokProdukcji) {
+    public Car (String model, String marka, Integer rokProdukcji) {
         this.model = model;
         this.marka = marka;
         this.rokProdukcji = rokProdukcji;

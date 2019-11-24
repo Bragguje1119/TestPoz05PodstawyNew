@@ -1,4 +1,4 @@
-import static java.lang.System.out;
+package Obiektowość;
 
 public class Human {
 
@@ -8,12 +8,20 @@ public class Human {
     private Integer birthYear ;
     private Integer age;
 
+
+
     //Konstruktor
-    Human (String name, String surname, Integer birthYear) {
+    public Human(String name, String surname, Integer year, Integer birthYear) {
         this.name = name;
         this.surname = surname;
         this.birthYear = birthYear;
         this.age = this.obliczWiek ();
+
+
+
+    }
+
+    public Human(String name, String surname, Integer birthYear) {
     }
 
     //metody klasy
@@ -44,4 +52,14 @@ public class Human {
         this.birthYear = birthYear;
         this.age = this.obliczWiek ();
     }
+
+    //Słówko static - pozwala dostać się do tej funkcji bez inicjalizacji obiektu nie mozemy operwać w nich na
+    // żadnych atrybutach/metodach niestetycznych
+
+    public static void opiszKlasę () {
+        System.out.println ("Klasa Human oblicza wiek i umożliwia przedstawienie się obiektu");
+    }
+
+    //metody klasy
+    private Integer obliczWiek;
 }
